@@ -2,35 +2,39 @@
 
   <h2>{{task.name | uppercase}} Details</h2>
 
-  <div><span>id: </span>{{ task.id }}</div>
-
-  <div>
-      <label>Name:
-        <input [(ngModel)]="task.name" placeholder="name">
-      </label>
+  <div class="input-group">
+      <label for="name">Name:</label>
+        <input [(ngModel)]="task.name"
+          placeholder="Task's name"
+          name="name">
     </div>
 
-  <div>
-    <label>Location:
-      <input [(ngModel)]="task.location" placeholder="location">
-    </label>
+  <div class="input-group">
+    <label for="location">Location:</label>
+      <input [(ngModel)]="task.location"
+        placeholder="Where?"
+        name="location">
   </div>
 
-  <div>
-    <label>Description:
-      <input [(ngModel)]="task.description" placeholder="description">
-    </label>
+  <div class="input-group">
+    <label for="description">Description:</label>
+      <input [(ngModel)]="task.description"
+        placeholder="What is it?"
+        name="description">
   </div>
 
-  <div><label>Start Date:
-    <input [(ngModel)]="task.startDate" placeholder="startDate">
-  </label>
+  <div class="input-group">
+    <label for="startdate">Start Date:</label>
+    <input [(ngModel)]="task.startDate"
+      placeholder="When does it start?"
+      name="startdate">
   </div>
 
-  <div>
-    <label>End Date:
-      <input [(ngModel)]="task.endDate" placeholder="endDate">
-    </label>
+  <div class="input-group">
+    <label for="enddate">End Date:</label>
+      <input [(ngModel)]="task.endDate"
+        placeholder="When should it end?"
+        name="enddate">
   </div>
 
 </div>
