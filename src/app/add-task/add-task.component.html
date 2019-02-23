@@ -1,0 +1,61 @@
+<button class="add-btn" *ngIf="!toggled" type="button"
+  (click)="toggleButton()">
+  Add a new Task
+</button>
+
+<form *ngIf="toggled" [formGroup]="addTaskForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input id="name"
+      formControlName="name"
+      placeholder="Task's name"
+      name="name"
+      class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <input id="location"
+      formControlName="location"
+      placeholder="Where?"
+      name="location"
+      class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input id="decription"
+      formControlName="description"
+      placeholder="What is it?"
+      name="description"
+      class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="startdate">Start Date:</label>
+    <input id="startdate"
+      formControlName="startdate"
+      placeholder="When does it start?"
+      name="startdate"
+      class="form-control">
+  </div>
+
+  <div class="form-group">
+      <label for="enddate">End Date:</label>
+      <input id="enddate"
+        formControlName="enddate"
+        placeholder="When should it end?"
+        name="enddate"
+        class="form-control">
+  </div>
+
+  <button class="submit">
+    Create
+  </button>
+
+  <button class="cancel"
+    type="button"
+    (click)="toggleButton()">
+      Hide
+  </button>
+</form>

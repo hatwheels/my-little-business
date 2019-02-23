@@ -1,0 +1,36 @@
+<div>
+
+  <h2>{{task.name | uppercase}} Details</h2>
+
+  <div><span>id: </span>{{ task.id }}</div>
+
+  <div>
+      <label>Name:
+        <input [(ngModel)]="task.name" placeholder="name">
+      </label>
+    </div>
+
+  <div>
+    <label>Location:
+      <input [(ngModel)]="task.location" placeholder="location">
+    </label>
+  </div>
+
+  <div>
+    <label>Description:
+      <input [(ngModel)]="task.description" placeholder="description">
+    </label>
+  </div>
+
+  <div><label>Start Date:
+    <input [(ngModel)]="task.startDate" placeholder="startDate">
+  </label>
+  </div>
+
+  <div>
+    <label>End Date:
+      <input [(ngModel)]="task.endDate" placeholder="endDate">
+    </label>
+  </div>
+
+</div>

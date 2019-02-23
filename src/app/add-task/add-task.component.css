@@ -1,0 +1,26 @@
+button {
+  background-color: darkgoldenrod;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 12px 28px;
+}
+
+.add-btn {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+form button {
+  margin-top: 10px;
+}
+
+form .cancel {
+  background-color:rgb(67, 179, 132);
+}
+
+.form-group {
+  width: 90%;
+}

@@ -1,0 +1,22 @@
+<h2>Tasks</h2>
+<div class="main">
+
+  <div class="tasks-with-details">
+    <ul *ngFor="let task of tasks; let i = index" class="tasks">
+      <li
+        [class.selected]="task === selectedTask"
+        (click)="onSelect(task)">
+          {{task.name}}
+      </li>
+        <button class="delete-btn"
+          (click)="deleteTask(i)"> Delete
+        </button>
+    </ul>
+
+    <app-task-detail *ngIf="selectedTask" [(task)]='selectedTask'></app-task-detail>
+
+  </div>
+
+  <app-add-task style="flex-grow: 8"></app-add-task>
+</div>
+
