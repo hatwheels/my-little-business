@@ -24,17 +24,26 @@
   </div>
 
   <div class="input-group">
-    <label for="startdate">Start Date:</label>
-    <input [(ngModel)]="task.startDate"
-      placeholder="When does it start?"
-      name="startdate">
+    <label for="startDate">Start Date:</label>
+    <input [ngModel]="task.startDate | date:'yyyy-MM-dd'"
+      (ngModelChange)="task.startDate = $event"
+      type="date"
+      name="startDate"
+      placeholder="When does it start?">
   </div>
 
   <div class="input-group">
-    <label for="enddate">End Date:</label>
-      <input [(ngModel)]="task.endDate"
-        placeholder="When should it end?"
-        name="enddate">
+    <label for="endDate">End Date:</label>
+      <input [ngModel]="task.endDate | date:'yyyy-MM-dd'"
+        (ngModelChange)="task.endDate = $event"
+        type="date"
+        name="endDate"
+        placeholder="When should it end?">
   </div>
 
 </div>
+
+
+<!-- <input [ngModel]="startDate | date:'yyyy-MM-dd'" (ngModelChange)="startDate = $event" type="date" name="startDate"/> -->
+
+

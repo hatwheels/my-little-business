@@ -21,8 +21,8 @@ export class AddTaskComponent implements OnInit {
       name: [],
       location: [],
       description: [],
-      startdate: [],
-      enddate: [],
+      startDate: [],
+      endDate: [],
     });
   }
 
